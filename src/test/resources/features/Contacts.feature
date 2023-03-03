@@ -61,14 +61,14 @@ Feature: Contacts page
       | user10         | Brenden   | Schneider |
       | storemanager85 | Stephan   | Haley     |
 
- @db
+#@db
     Scenario: Contact test with email
       Given the user logged in as "sales manager"
       And the user navigates to "Customers" "Contacts"
       When the user clicks the "mrjakc@mail.ru" from contacts
       Then the information should be same with database
 
-   @db @wip
+  # @db @wip
    Scenario: Contact test with email
     Given the user logged in as "sales manager"
     And the user navigates to "Customers" "Contacts"
@@ -76,7 +76,7 @@ Feature: Contacts page
     Then the information for "jakop@gmail.com" should be same with database
 
 
-   @db
+ #@db
   Scenario Outline: Contact test with email
     Given the user logged in as "sales manager"
     And the user navigates to "Customers" "Contacts"
