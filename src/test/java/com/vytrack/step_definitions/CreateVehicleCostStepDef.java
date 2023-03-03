@@ -8,6 +8,7 @@ import com.vytrack.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
 
 public class CreateVehicleCostStepDef {
+
     Actions actions = new Actions(Driver.get());
     CreateVehicleCostPage fleet = new CreateVehicleCostPage();
     @Given("the driver hovers over fleet button")
