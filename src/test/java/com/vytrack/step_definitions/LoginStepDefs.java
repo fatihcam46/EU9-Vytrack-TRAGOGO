@@ -17,6 +17,7 @@ public class LoginStepDefs {
         String url = ConfigurationReader.get("url");
         //WebDriver driver = Driver.get();
         Driver.get().get(url);
+        System.out.println("login page navigated");
 
     }
 
@@ -27,12 +28,14 @@ public class LoginStepDefs {
 
         LoginPage loginPage = new LoginPage();
         loginPage.login(username,password);
+        System.out.println("submit button clicked");
     }
 
     @Then("the user should be able to login")
     public void the_user_should_be_able_to_login() throws InterruptedException {
         BrowserUtils.waitFor(3);
         String actualTitle = Driver.get().getTitle();
+        System.out.println("Dashboard actualTitle = " + actualTitle);
         Assert.assertEquals("Dashboard",actualTitle);
 
     }
