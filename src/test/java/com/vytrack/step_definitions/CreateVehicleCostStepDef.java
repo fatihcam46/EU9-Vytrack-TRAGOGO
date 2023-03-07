@@ -33,16 +33,17 @@ public class CreateVehicleCostStepDef {
     public void the_driver_clicks_vehicle_costs_button() {
         dashboardPage.vehicleCostsButton.click();
         System.out.println("hoovered button clicked");
-        BrowserUtils.waitForStaleElement(vehicleCostsPage.createVehicleCostsButton);
-
     }
 
-
-    @And("the driver clicks vehicle costs button on the page")
-    public void the_driver_clicks_vehicle_costs_button_on_the_page() {
-        //BrowserUtils.waitForStaleElement(vehicleCostsPage.createVehicleCostsButton);
-        WebDriverWait wait = new WebDriverWait(driver,15);
-        wait.until(ExpectedConditions.invisibilityOfAllElements(driver.findElements(By.xpath("//*[starts-with(@id,'mask')]"))));
+    @Given("the driver clicks create vehicle costs button on the page")
+    public void the_driver_clicks_create_vehicle_costs_button_on_the_page() throws InterruptedException {
+        BrowserUtils.waitForPageToLoad(5);
+        System.out.println("loader waited");
+        driver.findElement(By.xpath("//*")).click();
+        System.out.println("loader mask");
+        wait(2);
+        BrowserUtils.waitForClickablility(vehicleCostsPage.createVehicleCostsButton, 15);
+        System.out.println("15 secs waited");
         vehicleCostsPage.createVehicleCostsButton.click();
         System.out.println("create vehicle button clicked");
     }
