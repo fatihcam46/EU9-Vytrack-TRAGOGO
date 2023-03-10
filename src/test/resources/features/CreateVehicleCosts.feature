@@ -9,7 +9,7 @@ Feature: Driver should be able to create vehicle costs
   Scenario: Create vehicle costs
     When the driver hovers over fleet button
     And the driver clicks vehicle costs button
-    And the driver clicks vehicle costs button on the page
+    And the driver clicks create vehicle costs button on the page
     And the driver clicks type button on the  Create vehicle costs page
     And the driver writes total price on the Create vehicle costs page
     And the driver enters date on the Create vehicle costs page
