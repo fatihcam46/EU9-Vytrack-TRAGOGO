@@ -10,7 +10,7 @@ public class CreateVehicleCostPage {
         PageFactory.initElements(Driver.get(), this);
     }
 
-    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[1]/a")
+    @FindBy(xpath = "//span[.=\"Vehicle Costs\"]")
     public WebElement fleetButton;
 
     @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[1]/div/div/ul/li[5]/a")

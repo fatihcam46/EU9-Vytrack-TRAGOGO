@@ -3,6 +3,7 @@ package com.vytrack.step_definitions;
 import com.vytrack.pages.CreateVehicleCostPage;
 import com.vytrack.utilities.Driver;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
 import org.openqa.selenium.interactions.Actions;
 import com.vytrack.utilities.BrowserUtils;
 import io.cucumber.java.en.Given;
@@ -10,9 +11,11 @@ import io.cucumber.java.en.Given;
 public class CreateVehicleCostStepDef {
     Actions actions = new Actions(Driver.get());
     CreateVehicleCostPage fleet = new CreateVehicleCostPage();
-    @Given("the driver hovers over fleet button")
+    @When("the driver hovers over fleet button")
+
     public void the_driver_clicks_fleet_button() {
-        BrowserUtils.waitFor(30);
+
+        BrowserUtils.waitForVisibility(fleet.fleetButton, 45);
         System.out.println("logged in");
         actions.moveToElement(fleet.fleetButton).perform();
         BrowserUtils.waitFor(4);
