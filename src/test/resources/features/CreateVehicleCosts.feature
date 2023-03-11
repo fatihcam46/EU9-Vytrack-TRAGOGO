@@ -5,7 +5,7 @@ Feature: Driver should be able to create vehicle costs
     Given the user is on the login page
      When the user enters the driver information
      Then the user should be able to login
-//
+
   Scenario: Create vehicle costs
     When the driver hovers over fleet button
     And the driver clicks vehicle costs button
